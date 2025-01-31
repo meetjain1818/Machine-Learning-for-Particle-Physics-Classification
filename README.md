@@ -1,6 +1,3 @@
-(Due to technical issues, the search service is temporarily unavailable.)
-
-```markdown
 # Graph Neural Networks for Particle Collision Classification  
 **Signal vs. Background Event Discrimination Using GNNs**  
 
