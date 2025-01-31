@@ -32,29 +32,29 @@ def check_pyg_cuda_status():
     print("\nPyTorch Geometric Status:")
     print(f"- PyG version: {torch_geometric.__version__}")
     
-    # try:
-    #     import torch_scatter
-    #     print("- torch_scatter: Installed")
-    # except ImportError:
-    #     print("- torch_scatter: Not installed")
+    try:
+        import torch_scatter
+        print("- torch_scatter: Installed")
+    except ImportError:
+        print("- torch_scatter: Not installed")
     
-    # try:
-    #     import torch_sparse
-    #     print("- torch_sparse: Installed")
-    # except ImportError:
-    #     print("- torch_sparse: Not installed")
+    try:
+        import torch_sparse
+        print("- torch_sparse: Installed")
+    except ImportError:
+        print("- torch_sparse: Not installed")
     
-    # try:
-    #     import torch_cluster
-    #     print("- torch_cluster: Installed")
-    # except ImportError:
-    #     print("- torch_cluster: Not installed")
+    try:
+        import torch_cluster
+        print("- torch_cluster: Installed")
+    except ImportError:
+        print("- torch_cluster: Not installed")
     
-    # try:
-    #     import torch_spline_conv
-    #     print("- torch_spline_conv: Installed")
-    # except ImportError:
-    #     print("- torch_spline_conv: Not installed")
+    try:
+        import torch_spline_conv
+        print("- torch_spline_conv: Installed")
+    except ImportError:
+        print("- torch_spline_conv: Not installed")
 
     edge_index = torch.tensor([[0, 1], [1, 0]], dtype=torch.long)
     x = torch.randn(2, 10)
