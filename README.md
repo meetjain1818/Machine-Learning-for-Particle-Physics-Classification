@@ -1,13 +1,16 @@
-# Graph Neural Networks for Particle Collision Classification  
-**Signal vs. Background Event Discrimination Using GNNs**  
+# Machine Learning for Particle Collision Event Classification  
+**Signal vs. Background Event Discrimination Using ML Algorithms**  
 
 ---
 
 ## 📌 Overview  
-This repository contains the implementation of a **Graph Neural Network (GNN)**-based framework for binary classification of particle collision events simulated using MadGraph, Pythia, and Delphes. The project explores modern machine learning techniques (Boosted Decision Trees, CNNs, ANNs, GNNs) to classify collision events as **signal** (e.g., rare physics processes) or **background** (Standard Model processes). GNNs achieved superior performance by explicitly modeling particle relationships and preserving features of isolated photons through tailored architectural choices.  
+This repository contains the implementation of various modern ML algorithms -based framework for binary classification of particle collision events simulated using MadGraph, Pythia, and Delphes. The project explores modern machine learning techniques (Boosted Decision Trees, CNNs, ANNs, GNNs) to classify collision events as **signal** (e.g., rare physics processes) or **background** (Standard Model processes). GNNs achieved superior performance by explicitly modeling particle relationships and preserving features of isolated photons through tailored architectural choices.  
 
-![GNN Message Passing](docs/gnn_schematic.png)  
-*Figure: Message-passing mechanism in GNNs for particle collision data.*
+![Signal Feynman Diagram](markdown_images/feynman_signal.jpeg)  
+*Figure: Signal Event Feynman Diagram*
+
+![Background Feynman Diagram](markdown_images/feynman_background.png)  
+*Figure: Background Event Feynman Diagram*
 
 ---
 
@@ -17,71 +20,42 @@ This repository contains the implementation of a **Graph Neural Network (GNN)**-
   - Signal/Background labels for binary classification.  
 - **Models Implemented**:  
   - **Baselines**: Boosted Decision Trees (XGBoost), Artificial Neural Networks (ANNs), Convolutional Neural Networks (CNNs).  
-  - **GNN Variants**: Graph Convolutional Networks (GCN), Graph Attention Networks (GAT), NNConv (edge-aware convolution).  
-- **Innovations**:  
-  - Graph construction with isolated photons (disconnected nodes) to prevent feature dilution.  
-  - Global max pooling for graph-level embeddings to preserve critical isolated features.  
-  - Dynamic edge feature handling via `NNConv` (PyTorch Geometric).  
-
+  - **GNN Variants**: Graph Convolutional Networks (GCN), NNConv (edge-aware convolution), GatedGraphConv.
 ---
 
 ## 🛠️ Installation  
 1. **Clone the repository**:  
    ```bash  
-   git clone https://github.com/<your-username>/particle-collision-gnn.git  
-   cd particle-collision-gnn  
+   git clone https://github.com/meetjain1818/Machine-Learning-for-Particle-Physics-Classification.git  
+   cd Machine-Learning-for-Particle-Physics-Classification  
    ```  
 
 2. **Install dependencies**:  
    ```bash  
-   conda create -n gnn python=3.8  
+   conda create -n gnn python=3.10.16  
    conda activate gnn  
    pip install -r requirements.txt  
    ```  
    **Key Libraries**:  
    - PyTorch Geometric  
-   - PyTorch  
-   - XGBoost  
+   - PyTorch
    - scikit-learn  
    - pandas, numpy
    - TensorFLow 
-
-3. **Download Dataset**:  
-   - Follow instructions in `data/README.md` to download/preprocess the Delphes-simulated dataset.  
-
----
-
-## 🚀 Usage  
-
-### 1. Data Preprocessing  
-```python  
-python scripts/preprocess.py --data_dir ./data/raw --output_dir ./data/processed  
-```  
-- Converts raw Delphes ROOT files into graph-structured data (`.pt` files).  
-- Isolated photons are disconnected by default.  
-
-### 2. Training Models  
-**Example: Train a GNN with NNConv layers**  
-```python  
-python train.py --model nnconv --hidden_channels 64 --lr 0.001 --epochs 100  
-```  
-**Supported Models**: `--model [gcn, gat, nnconv, xgboost, cnn]`  
-
-### 3. Evaluation  
-```python  
-python evaluate.py --checkpoint runs/nnconv/best_model.pt --test_data data/processed/test.pt  
-```  
-- Reports metrics: AUC-ROC, F1-score, accuracy, confusion matrices.  
 
 ---
 
 ## 📊 Results  
 | Model       | AUC-ROC | F1-Score | Accuracy |  
 |-------------|---------|----------|----------|  
-| XGBoost     | 0.82    | 0.78     | 0.81     |  
-| CNN         | 0.85    | 0.79     | 0.83     |  
-| GCN         | 0.88    | 0.83     | 0.86     |  
-| **GAT**     | **0.92**| **0.89** | **0.90** |  
+| RandomForest     | 0.887    | 0.74     | 0.82     |
+| Gradient Boosting     | 0.887    | 0.74     | 0.82     |
+| CNN(RGB Images)         | 0.764    | 0.645     | 0.692     | 
+| AlexNet(RGB Images)         | 0.85    | 0.79     | 0.83     | 
+| CNN(Greyscale Images)         | 0.85    | 0.79     | 0.83     | 
+| GCNConv         | 0.88    | 0.83     | 0.86     |  
+| **NNConv**     | **0.92**| **0.89** | **0.90** |  
+| **GatedGraphConv**     | **0.92**| **0.89** | **0.90** |  
 
 **Key Findings**:  
 - GNNs outperform traditional models due to relational inductive bias.  
