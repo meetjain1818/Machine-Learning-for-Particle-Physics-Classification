@@ -197,13 +197,6 @@ def test(model:torch.nn.Module, loader:torch_geometric.data.DataLoader,
     return correct / len(loader.dataset)
 
 
-from sklearn.metrics import (
-    accuracy_score, precision_score, recall_score, f1_score, 
-    auc, roc_curve, precision_recall_curve, confusion_matrix, 
-    det_curve, DetCurveDisplay, class_likelihood_ratios
-)
-import seaborn as sns
-
 def eval_model(y_true:list[float], y_pred_prob:list[float], y_pred_label:list[float],*, save_fig:bool = False, save_fig_path:str = None) -> None:
     """
     Evaluate the model's performance using various classification metrics and visualization.
