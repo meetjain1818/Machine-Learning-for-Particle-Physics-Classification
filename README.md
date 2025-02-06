@@ -6,10 +6,10 @@
 ## 📌 Overview  
 This repository contains the implementation of various modern ML algorithms -based framework for binary classification of particle collision events simulated using MadGraph, Pythia, and Delphes. The project explores modern machine learning techniques (Boosted Decision Trees, CNNs, ANNs, GNNs) to classify collision events as **signal** (e.g., rare physics processes) or **background** (Standard Model processes). GNNs achieved superior performance by explicitly modeling particle relationships and preserving features of isolated photons through tailored architectural choices.  
 
-![Signal Feynman Diagram](markdown_images/feynman_signal.jpeg)  
+![Signal Feynman Diagram](markdown_images/signal.jpg)  
 *Figure: Signal Event Feynman Diagram*
 
-![Background Feynman Diagram](markdown_images/feynman_background.png)  
+![Background Feynman Diagram](markdown_images/background.jpg)  
 *Figure: Background Event Feynman Diagram*
 
 ---
