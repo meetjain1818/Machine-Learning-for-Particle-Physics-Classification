@@ -52,6 +52,7 @@ This repository contains various Jupyter notebooks implementing different ML mod
 - **[Comparision_Plots.ipynb](https://github.com/meetjain1818/Machine-Learning-for-Particle-Physics-Classification/blob/main/GNN/13j3p/model_output_arrays/Comparision_Plots.ipynb)**
 ### 📂 GNN/13j3p_withBtagLabel_NodeFeature
 
+- **[1_NNConv_13j3p_EtaPhiPtEBtaglabel.ipynb](https://github.com/meetjain1818/Machine-Learning-for-Particle-Physics-Classification/blob/main/GNN/13j3p_withBtagLabel_NodeFeature/1_NNConv_13j3p_EtaPhiPtEBtaglabel.ipynb)**
 - **[GCNConv_13j3p_EtaPhiPtEBtaglabel.ipynb](https://github.com/meetjain1818/Machine-Learning-for-Particle-Physics-Classification/blob/main/GNN/13j3p_withBtagLabel_NodeFeature/GCNConv_13j3p_EtaPhiPtEBtaglabel.ipynb)**
 - **[GatedGraphConv_13j3p_EtaPhiPtEBtaglabel.ipynb](https://github.com/meetjain1818/Machine-Learning-for-Particle-Physics-Classification/blob/main/GNN/13j3p_withBtagLabel_NodeFeature/GatedGraphConv_13j3p_EtaPhiPtEBtaglabel.ipynb)**
 - **[NNConv_13j3p_EtaPhiPtEBtaglabel.ipynb](https://github.com/meetjain1818/Machine-Learning-for-Particle-Physics-Classification/blob/main/GNN/13j3p_withBtagLabel_NodeFeature/NNConv_13j3p_EtaPhiPtEBtaglabel.ipynb)**
