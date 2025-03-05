@@ -346,7 +346,7 @@ def visualize_graph(data, *, save_fig=False, save_fig_path=None) -> None:
         for i in range(data.num_nodes)
     }
 
-    plt.figure(figsize=(5, 3), dpi = 300)
+    plt.figure(figsize=(5, 3))
     pos = nx.spring_layout(G, seed=42, k=0.15)
 
     # Draw base graph
@@ -378,7 +378,7 @@ def visualize_graph(data, *, save_fig=False, save_fig_path=None) -> None:
     plt.title(f"{event_type} Event No.{data.eventno.item()}", fontsize=12)
 
     if save_fig and save_fig_path:
-        plt.savefig(save_fig_path, bbox_inches='tight', pad_inches=0.1)
+        plt.savefig(save_fig_path, bbox_inches='tight', pad_inches=0.1, dpi = 300)
         print(f"Figure saved to {save_fig_path}")
 
     plt.show()
