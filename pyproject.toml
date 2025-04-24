@@ -1,0 +1,16 @@
+[project]
+name = "all"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+"torch-geometric==2.6.1",
+"torch_cluster==1.6.3+pt25cu121",
+"torch_scatter==2.1.2+pt25cu121",
+"torch_sparse==0.6.18+pt25cu121",
+"torch_spline_conv==1.2.2+pt25cu121",
+"torchaudio==2.5.1+cu121",
+"torchmetrics==1.6.1",
+"torchvision==0.20.1+cu121",
+]
