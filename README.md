@@ -117,8 +117,6 @@ See `requirements.txt` for a full list of dependencies and versions.
 *   **B-Jet Selection:**
     *   "Only first 2": Leading and sub-leading jets if both b-tagged.
     *   "Any two": Requiring at least two b-tagged jets in the event.
-*   **Format:** Raw data likely in `.root` format (Delphes output). Processed data stored as Pandas DataFrames (`.pkl`) for BDT/CNN and PyTorch Geometric `Data` objects (`.pt`) for GNNs.
-*   **Availability:** [State if data is included in repo (if small), downloadable from a link, or needs to be generated using the simulation scripts].
 
 ## Results Summary
 
@@ -135,7 +133,7 @@ MIT License
 
 Example:
 ```markdown
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 ```
 
 ## Citation
@@ -153,11 +151,9 @@ If you use this code or findings in your research, please cite the accompanying 
   note         = {Supervised by Prof. Abhishek Murlidhar Iyer}
 }
 ```
-Consider adding a DOI if one is assigned by your institution or through archival services like Zenodo.
 
 ## Contact
 
 *   Meet Jain - meetjain1818@gmail.com
-*   Prof. Abhishek M. Iyer - [https://iitd.irins.org/profile/214138]
 
 Project Link: [https://github.com/meetjain1818/Machine-Learning-for-Particle-Physics-Classification.git](https://github.com/meetjain1818/Machine-Learning-for-Particle-Physics-Classification.git)
